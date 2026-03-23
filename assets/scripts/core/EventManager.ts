@@ -1,62 +1,35 @@
 // assets/scripts/core/EventManager.ts
-import { Singleton } from "./Singleton";
+import { EventTarget } from 'cc';
 
-// 定義回呼函式的型別
-export type EventCallback = (...args: any[]) => void;
+export class EventManager {
 
-interface IEventData {
-    callback: EventCallback;
-    target: any;
-}
-
-export class EventManager extends Singleton<EventManager> {
-    private _eventMap: Map<string, IEventData[]> = new Map();
+    // 【核心设备】：Cocos 官方提供的一台极其稳定的“无线电发射塔”
+    private _eventTarget: EventTarget = new EventTarget();
 
     /**
-     * 註冊事件 (Subscribe)
-     * @param eventName 事件名稱
-     * @param callback 回呼函式
-     * @param target 綁定的目標 (通常傳入 this)
+     * 1. 收听频道 (订阅事件)
+     * @param eventName 频道的暗号（比如："BLOCK_CLICKED"）
+     * @param callback 听到广播后你要干嘛（你的反应动作）
+     * @param target 谁在收听（通常是你自己 this）
      */
-    public on(eventName: string, callback: EventCallback, target: any): void {
-        if (!this._eventMap.has(eventName)) {
-            this._eventMap.set(eventName, []);
-        }
-        this._eventMap.get(eventName)!.push({ callback, target });
+    public on(eventName: string, callback: Function, target: any) {
+        this._eventTarget.on(eventName, callback as any, target);
     }
 
     /**
-     * 觸發事件 (Publish)
-     * @param eventName 事件名稱
-     * @param args 傳遞的參數
+     * 2. 取消收听 (拔掉耳机)
+     * （极其重要：如果一个零件被销毁了，必须拔掉耳机，不然会报错漏电！）
      */
-    public emit(eventName: string, ...args: any[]): void {
-        if (!this._eventMap.has(eventName)) return;
-        
-        const listeners = this._eventMap.get(eventName)!;
-        for (let i = 0; i < listeners.length; i++) {
-            const listener = listeners[i];
-            listener.callback.apply(listener.target, args);
-        }
+    public off(eventName: string, callback: Function, target: any) {
+        this._eventTarget.off(eventName, callback as any, target);
     }
 
     /**
-     * 移除事件註冊 (Unsubscribe)
+     * 3. 拿起对讲机全屏大喊！(发送广播)
+     * @param eventName 频道的暗号
+     * @param args 你要顺带传递的情报（比如坐标 x, y，是个百宝箱，想塞多少塞多少）
      */
-    public off(eventName: string, callback: EventCallback, target: any): void {
-        if (!this._eventMap.has(eventName)) return;
-
-        const listeners = this._eventMap.get(eventName)!;
-        for (let i = listeners.length - 1; i >= 0; i--) {
-            const listener = listeners[i];
-            if (listener.callback === callback && listener.target === target) {
-                listeners.splice(i, 1);
-                break;
-            }
-        }
-        
-        if (listeners.length === 0) {
-            this._eventMap.delete(eventName);
-        }
+    public emit(eventName: string, ...args: any[]) {
+        this._eventTarget.emit(eventName, ...args);
     }
 }

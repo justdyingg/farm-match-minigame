@@ -1,9 +1,7 @@
 {
-  /* Base configuration. Do not edit this field. */
   "extends": "./temp/tsconfig.cocos.json",
-
-  /* Add your custom configuration here. */
   "compilerOptions": {
-    "strict": false
+    "strict": false,
+    "lib": ["es2015", "es2016", "dom"]   // 添加 es2016 以支持 includes
   }
 }
