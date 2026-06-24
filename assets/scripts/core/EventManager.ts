@@ -1,33 +1,38 @@
 // assets/scripts/core/EventManager.ts
 import { EventTarget } from 'cc';
 
+/**
+ * 全局事件管理器
+ * 基于发布-订阅模式实现模块间松耦合通信
+ */
 export class EventManager {
-
-    // 【核心设备】：Cocos 官方提供的一台极其稳定的“无线电发射塔”
+    /** Cocos 原生事件目标对象，作为事件中转站 */
     private _eventTarget: EventTarget = new EventTarget();
 
     /**
-     * 1. 收听频道 (订阅事件)
-     * @param eventName 频道的暗号（比如："BLOCK_CLICKED"）
-     * @param callback 听到广播后你要干嘛（你的反应动作）
-     * @param target 谁在收听（通常是你自己 this）
+     * 订阅事件
+     * @param eventName 事件名称
+     * @param callback 收到事件后执行的回调函数
+     * @param target 回调函数的 this 指向
      */
     public on(eventName: string, callback: Function, target: any) {
         this._eventTarget.on(eventName, callback as any, target);
     }
 
     /**
-     * 2. 取消收听 (拔掉耳机)
-     * （极其重要：如果一个零件被销毁了，必须拔掉耳机，不然会报错漏电！）
+     * 取消订阅事件
+     * @param eventName 事件名称
+     * @param callback 要移除的回调函数
+     * @param target 绑定的 this 对象
      */
     public off(eventName: string, callback: Function, target: any) {
         this._eventTarget.off(eventName, callback as any, target);
     }
 
     /**
-     * 3. 拿起对讲机全屏大喊！(发送广播)
-     * @param eventName 频道的暗号
-     * @param args 你要顺带传递的情报（比如坐标 x, y，是个百宝箱，想塞多少塞多少）
+     * 发送广播事件
+     * @param eventName 事件名称
+     * @param args 传递给回调函数的参数
      */
     public emit(eventName: string, ...args: any[]) {
         this._eventTarget.emit(eventName, ...args);

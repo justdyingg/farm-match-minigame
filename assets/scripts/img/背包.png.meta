@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "63f4206d-13ca-404a-954e-8217414ce569",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "63f4206d-13ca-404a-954e-8217414ce569@6c48a",
+      "displayName": "背包",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "63f4206d-13ca-404a-954e-8217414ce569",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "63f4206d-13ca-404a-954e-8217414ce569@f9941",
+      "displayName": "背包",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": -7.5,
+        "offsetY": -258.5,
+        "trimX": 232,
+        "trimY": 545,
+        "width": 545,
+        "height": 451,
+        "rawWidth": 1024,
+        "rawHeight": 1024,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -272.5,
+            -225.5,
+            0,
+            272.5,
+            -225.5,
+            0,
+            -272.5,
+            225.5,
+            0,
+            272.5,
+            225.5,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            232,
+            479,
+            777,
+            479,
+            232,
+            28,
+            777,
+            28
+          ],
+          "nuv": [
+            0.2265625,
+            0.02734375,
+            0.7587890625,
+            0.02734375,
+            0.2265625,
+            0.4677734375,
+            0.7587890625,
+            0.4677734375
+          ],
+          "minPos": [
+            -272.5,
+            -225.5,
+            0
+          ],
+          "maxPos": [
+            272.5,
+            225.5,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "63f4206d-13ca-404a-954e-8217414ce569@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "63f4206d-13ca-404a-954e-8217414ce569@6c48a"
+  }
+}

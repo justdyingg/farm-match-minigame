@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "8a4b6c39-7975-4c88-bdcb-31c5f65104b2",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "8a4b6c39-7975-4c88-bdcb-31c5f65104b2@6c48a",
+      "displayName": "locked_plot",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "8a4b6c39-7975-4c88-bdcb-31c5f65104b2",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "8a4b6c39-7975-4c88-bdcb-31c5f65104b2@f9941",
+      "displayName": "locked_plot",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": -760.5,
+        "offsetY": 739.5,
+        "trimX": 42,
+        "trimY": 114,
+        "width": 443,
+        "height": 341,
+        "rawWidth": 2048,
+        "rawHeight": 2048,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -221.5,
+            -170.5,
+            0,
+            221.5,
+            -170.5,
+            0,
+            -221.5,
+            170.5,
+            0,
+            221.5,
+            170.5,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            42,
+            1934,
+            485,
+            1934,
+            42,
+            1593,
+            485,
+            1593
+          ],
+          "nuv": [
+            0.0205078125,
+            0.77783203125,
+            0.23681640625,
+            0.77783203125,
+            0.0205078125,
+            0.9443359375,
+            0.23681640625,
+            0.9443359375
+          ],
+          "minPos": [
+            -221.5,
+            -170.5,
+            0
+          ],
+          "maxPos": [
+            221.5,
+            170.5,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "8a4b6c39-7975-4c88-bdcb-31c5f65104b2@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "8a4b6c39-7975-4c88-bdcb-31c5f65104b2@6c48a"
+  }
+}
