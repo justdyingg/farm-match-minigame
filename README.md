@@ -6,9 +6,9 @@
 
 ## 🎥 游戏演示
 
-<video src="demo.mp4" controls width="100%"></video>
+<video src="演示视频.mp4" controls width="100%"></video>
 
-*如果视频无法加载，可直接点击 [demo.mp4](demo.mp4) 下载观看*
+*如果视频无法加载，可直接点击 [演示视频.mp4](演示视频.mp4) 下载观看*
 
 ---
 
